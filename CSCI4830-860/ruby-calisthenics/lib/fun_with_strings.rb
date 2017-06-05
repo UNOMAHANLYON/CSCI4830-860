@@ -8,7 +8,7 @@ module FunWithStrings
   # count_words
   def count_words
     sArr = self.split(" ")
-    sHsh = new.Hash
+    sHsh = Hash.new
 	  sArr.each do |w|
 	    w.gsub!(/[^a-zA-Z]/, "")
 		  w.downcase!
@@ -23,10 +23,10 @@ module FunWithStrings
   # anagram_groups
   def anagram_groups
     num = 0
-    sHsh = new.Hash
+    sHsh = Hash.new
     sArr = []
     buffArr =[]
-    if s == nil || self == ""
+    if self == nil || self == ""
       return arr = []
     else
       arr = self.split(" ")
