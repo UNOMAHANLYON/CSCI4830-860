@@ -33,7 +33,7 @@ module FunWithStrings
       arr.each do |w|
         w.gsub!(/[^a-zA-Z]/, "")
         num = w.downcase.sum
-        sHsh[num.to_sym] = w
+        sHsh[num] = w
       end  
       sHsh.each do |key, value|
         value.values.each do |v|
