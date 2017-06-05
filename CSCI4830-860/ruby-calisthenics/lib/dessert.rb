@@ -1,6 +1,6 @@
 class Dessert
-  attr_reader @name
-  attr_reader @calories
+  attr_reader :name
+  attr_reader :calories
   def initialize(name, calories)
     @name = name
     @calories = calories
@@ -14,7 +14,7 @@ class Dessert
 end
 
 class JellyBean < Dessert
-  attr_reader flavor
+  attr_reader :flavor
   def initialize(flavor)
     @flavor = flavor
     @name = flavor + "jelly bean"

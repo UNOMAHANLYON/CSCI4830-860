@@ -22,24 +22,22 @@ module FunWithStrings
   end
   # anagram_groups
   def anagram_groups
-    num = 0
+    buffer = ""
     sHsh = Hash.new
     sArr = []
-    buffArr =[]
     if self == nil || self == ""
-      return arr = []
+      return sArr
     else
       arr = self.split(" ")
       arr.each do |w|
         w.gsub!(/[^a-zA-Z]/, "")
-        num = w.downcase.sum
-        sHsh[num] = w
-      end  
-      sHsh.each do |key, value|
-        value.values.each do |v|
-          buffArr.push(v)
-        end
-        sArr.push(buffArr)
+        buffer = w.downcase.chars.sort.join
+        puts buffer
+        sHsh[buffer] ||= []
+        sHsh[buffer] << w
+      end 
+      sHsh.each do |k,v|
+        sArr << v
       end
       return sArr
     end  
