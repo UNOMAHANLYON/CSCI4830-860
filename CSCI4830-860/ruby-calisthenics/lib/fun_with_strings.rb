@@ -32,7 +32,6 @@ module FunWithStrings
       arr.each do |w|
         w.gsub!(/[^a-zA-Z]/, "")
         buffer = w.downcase.chars.sort.join
-        puts buffer
         sHsh[buffer] ||= []
         sHsh[buffer] << w
       end 
